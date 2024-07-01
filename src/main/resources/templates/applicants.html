@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Applicant Details</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Applicant Details</h1>
+    <div class="details">
+        <table id="applicantsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Father's Name</th>
+                    <th>Mother's Name</th>
+                    <th>Date of Birth</th>
+                    <th>Mobile</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Marital Status</th>
+                    <th>Current Address</th>
+                    <th>Locality</th>
+                    <th>District</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Pincode</th>
+                    <th>Landmark</th>
+                    <th>Distance (km)</th>
+                    <th>Address Type</th>
+                    <th>Permanent Address</th>
+                    <th>Permanent Locality</th>
+                    <th>Permanent District</th>
+                    <th>Permanent City</th>
+                    <th>Permanent State</th>
+                    <th>Permanent Pincode</th>
+                </tr>
+            </thead>
+            <tbody id="applicantDetailsBody">
+                <!-- Data will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch the applicant details and populate the table
+        fetch('http://localhost:8080/api/applicantdetails')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.getElementById('applicantDetailsBody');
+                data.forEach(applicant => {
+                    const row = document.createElement('tr');
+
+                    row.innerHTML = `
+                        <td>${applicant.id_applicant}</td>
+                        <td>${applicant.name}</td>
+                        <td>${applicant.fathername}</td>
+                        <td>${applicant.mother}</td>
+                        <td>${applicant.dob}</td>
+                        <td>${applicant.mobile}</td>
+                        <td>${applicant.age}</td>
+                        <td>${applicant.gender}</td>
+                        <td>${applicant.maritalstatus}</td>
+                        <td>${applicant.currentaddress}</td>
+                        <td>${applicant.locality}</td>
+                        <td>${applicant.district}</td>
+                        <td>${applicant.city}</td>
+                        <td>${applicant.statename}</td>
+                        <td>${applicant.pincode}</td>
+                        <td>${applicant.landmark}</td>
+                        <td>${applicant.distanceinkm}</td>
+                        <td>${applicant.addresstype}</td>
+                        <td>${applicant.permanentaddress}</td>
+                        <td>${applicant.permanentlocality}</td>
+                        <td>${applicant.permanentdistrict}</td>
+                        <td>${applicant.permanentcity}</td>
+                        <td>${applicant.permanentstatename}</td>
+                        <td>${applicant.permanentpincode}</td>
+                    `;
+
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching applicant details:', error));
+    </script>
+</body>
+</html>
+
+

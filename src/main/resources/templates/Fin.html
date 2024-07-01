@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Details Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 700px; /* Increased max-width for better layout */
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Finance Details Form(Office use only)</h2>
+        <form action="/Fin" method="post" class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="loanAmount">Loan Amount:</label>
+                    <input type="text" class="form-control" id="loanAmount" name="loanAmount" required>
+                    <div class="invalid-feedback">
+                        Please provide a loan amount.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="disbursedAmount">Disbursed Amount:</label>
+                    <input type="text" class="form-control" id="disbursedAmount" name="disbursedAmount" required>
+                    <div class="invalid-feedback">
+                        Please provide a disbursed amount.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="modeOfInstallment">Mode of Installment:</label>
+                    <select class="form-control" id="modeOfInstallment" name="modeOfInstallment" required>
+                        <option value="">Select a mode </option>
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Bi-Weekly">Bi-Weekly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a mode of installment.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="roi">ROI:</label>
+                    <input type="text" class="form-control" id="roi" name="roi" required>
+                    <div class="invalid-feedback">
+                        Please provide ROI.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="processingFees">Processing Fees:</label>
+                    <input type="text" class="form-control" id="processingFees" name="processingFees" required>
+                    <div class="invalid-feedback">
+                        Please provide processing fees.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="gst">GST:</label>
+                    <input type="text" class="form-control" id="gst" name="gst" required>
+                    <div class="invalid-feedback">
+                        Please provide GST.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="installmentAmount">Installment Amount:</label>
+                    <input type="text" class="form-control" id="installmentAmount" name="installmentAmount" required>
+                    <div class="invalid-feedback">
+                        Please provide installment amount.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="timePeriod">Time Period:</label>
+                    <input type="text" class="form-control" id="timePeriod" name="timePeriod" required>
+                    <div class="invalid-feedback">
+                        Please provide time period.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="interestAmount">Interest Amount:</label>
+                    <input type="text" class="form-control" id="interestAmount" name="interestAmount" required>
+                    <div class="invalid-feedback">
+                        Please provide interest amount.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="noOfInstallment">Number of Installments:</label>
+                    <input type="text" class="form-control" id="noOfInstallment" name="noOfInstallment" required>
+                    <div class="invalid-feedback">
+                        Please provide number of installments.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="totalReturningAmount">Total Returning Amount:</label>
+                    <input type="text" class="form-control" id="totalReturningAmount" name="totalReturningAmount" required>
+                    <div class="invalid-feedback">
+                        Please provide total returning amount.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="installmentDay">Installment Day:</label>
+                    <input type="text" class="form-control" id="installmentDay" name="installmentDay" required>
+                    <div class="invalid-feedback">
+                        Please provide installment day.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS (optional, if needed for certain components) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

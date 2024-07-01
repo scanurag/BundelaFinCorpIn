@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarantor Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Guarantor Details Form</h2>
+        <form action="/add" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="Father">Father's Name:</label>
+            <input type="text" id="Father" name="Father" required>
+            
+            <label for="mother">Mother's Name:</label>
+            <input type="text" id="mother" name="mother" required>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" required>
+            
+            <label for="mob">Mobile:</label>
+            <input type="text" id="mob" name="mob" required>
+            
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+            
+            <label for="Gender">Gender:</label>
+            <select id="Gender" name="Gender" required>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <label for="MaritalStatus">Marital Status:</label>
+            <input type="text" id="MaritalStatus" name="MaritalStatus" required>
+            
+            <label for="permanentAddress">Permanent Address:</label>
+            <input type="text" id="permanentAddress" name="permanentAddress" required>
+            
+            <label for="locailty">Locality:</label>
+            <input type="text" id="locailty" name="locailty" required>
+            
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" required>
+            
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            
+            <label for="stateName">State:</label>
+            <input type="text" id="stateName" name="stateName" required>
+            
+            <label for="pinCode">Pin Code:</label>
+            <input type="text" id="pinCode" name="pinCode" required>
+            
+            <label for="landmark">Landmark:</label>
+            <input type="text" id="landmark" name="landmark" required>
+            
+            <label for="distanceinkm">Distance in Km:</label>
+            <input type="text" id="distanceinkm" name="distanceinkm" required>
+            
+            <label for="AddressType">Address Type:</label>
+            <input type="text" id="AddressType" name="AddressType" required>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
